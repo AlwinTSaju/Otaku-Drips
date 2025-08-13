@@ -1,0 +1,131 @@
+#search-results {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.search-results-main .product-card {
+    display: block !important;
+}
+
+#search-results .product-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+#search-results .product-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#search-results .product-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+#search-results .product-info {
+  padding: 1rem;
+}
+
+#search-results .series-tag {
+  display: inline-block;
+  background: #eee;
+  color: #444;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+#search-results h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #111;
+}
+
+.search-title {
+    font-size: 2.5rem;
+    margin-top: 8%;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #000;
+}
+
+#search-results .price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+#search-results .original-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+#search-results .current-price {
+  color: #e60000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#search-results .product-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#search-results .wishlist-btn,
+#search-results .select-btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#search-results .wishlist-btn {
+  background: none;
+  border: 1px solid #ddd;
+  color: #000;
+}
+
+#search-results .wishlist-btn:hover {
+  color: #e60000;
+  border-color: #e60000;
+}
+
+#search-results .select-btn {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+#search-results .select-btn:hover {
+  background-color: #ffdb4d;
+  transform: translateY(-2px);
+}
+
+#search-results .product-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+#search-results .product-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}

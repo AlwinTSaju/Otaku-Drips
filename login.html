@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - OtakuDrips</title>
+  <link rel="stylesheet" href="styles/login.css" />
+</head>
+<body> 
+    <div class="login-background">
+        <video autoplay muted loop>
+            <source src="./images/kenny.mp4" type="video/mp4">
+        </video>
+        <div class="login-container">
+            <div class="login-card">
+            <h2>Login</h2>
+            <p class="subtitle">Login to continue shopping</p>
+            <form action="login.php" method="POST">
+                <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <p class="signup-link">Don't have an account? <a href="register.html">Sign Up</a></p>
+            </div>
+        </div>
+  </div>
+</body>
+</html>

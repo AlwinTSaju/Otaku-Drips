@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otaku Drips - Anime clothing Store</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/search.css">
+</head>
+<body>
+    <script type="module" src="scripts/product.js"></script>
+    <script type="module" src="scripts/product-popup.js"></script>
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="./home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="shop.html#all">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="shop.html#one-piece">One Piece</a></li>
+                        <li><a href="shop.html#attack-on-titan">Attack on Titan</a></li>
+                        <li><a href="shop.html#demon-slayer">Demon Slayer</a></li>
+                        <li><a href="shop.html#chainsaw-man">Chainsaw Man</a></li>
+                        <li><a href="shop.html#naruto">Naruto</a></li>
+                        <li><a href="shop.html#hunter-x-hunter">Hunter X Hunter</a></li>
+                        <li><a href="shop.html#berserk">Berserk</a></li>
+                        <li><a href="shop.html#blue-lock">Blue Lock</a></li>
+                        <li><a href="shop.html#bleach">Bleach</a></li>
+                        <li><a href="shop.html#black-clover">Black Clover</a></li>
+                        <li><a href="shop.html#noragami">Noragami</a></li>
+                        <li><a href="shop.html#solo-leveling">Solo Leveling</a></li>
+                        <li><a href="shop.html#jujutsu-kaisen">Jujutsu Kaisen</a></li>
+                        <li><a href="shop.html#mob-psycho">Mob Psycho 100</a></li>
+                        <li><a href="shop.html#jojo">Jojo</a></li>
+                        <li><a href="shop.html#vagabond">Vagabond</a></li>
+                    </ul>
+                </li>
+                <li><a href="shop.html#all">Shop</a></li>
+                <li><a href="order-tracking.html">Order Tracking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="user-options">
+                <form id="search-form" action="search.html" method="GET">
+                    <input type="text" name="query" placeholder="Search products..." required>
+                    <button type="submit">Search</button>
+                </form>
+                <a href="#account">Login</a>
+                <a href="#wishlist">Wishlist (0)</a>
+                <a href="#cart">Cart (₹0.00)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <div class="product-showcase">
+            <div class="product-column">
+                <video autoplay muted loop>
+                    <source src="./images/IMG_2343.MP4" type="video/mp4">
+                </video>
+                <div class="banner-overlay">
+                    <img src="./images/Otaku-Drips-7-30-2025.png" alt="Banner Logo" class="banner-logo">
+                        <div class="product-info">
+                            <h1 class="tagline">Grab What You Actually Deserve!</h1>
+                             <a href="#logo-section" class="shop-now-btn" id="logo-section">See Further!</a>
+                        </div>
+                </div>
+            </div>
+    
+        </div>
+        <section class="logo-section">
+        <div class="logo-row">
+            <a href="shop.html#one-piece"><img src="./images/logorow/onepiece.jpeg" alt="One Piece Logo"></a>
+            <a href="shop.html#berserk"><img src="./images/logorow/berserk.webp" alt="Berserk Logo"></a>
+            <a href="shop.html#bleach"><img src="./images/logorow/bleach.webp" alt="Bleach Logo"></a>
+            <a href="shop.html#naruto"><img src="./images/logorow/naruto.webp" alt="Naruto Logo"></a>
+            <a href="shop.html#mob-psycho"><img src="./images/logorow/mob.webp" alt="Mob Psycho 100 Logo"></a>
+            <a href="shop.html#noragami"><img src="./images/logorow/noragami.webp" alt="Noragami Logo"></a>
+            <a href="shop.html#blue-lock"><img src="./images/logorow/bluelock.webp" alt="Bluelock Logo"></a>
+            <a href="shop.html#chainsaw-man"><img src="./images/logorow/chainsaw.webp" alt="Chainsaw Man Logo"></a>
+        </div>
+        </section>
+        
+        <!-- About Section -->
+        <section class="about">
+            <h2>Anime Minimalism at its Finest</h2>
+            <p>Otaku Drips designs are minimal, aesthetic, and can be freely worn without the constant fear of being judged. The quality of our prints combined with breathable and superior quality clothing ensures complete satisfaction.</p>
+        </section>
+
+        <!-- Fan Favorites Section -->
+        <section class="fan-favorites">
+            <h2>Fan Favorites</h2>
+            <div class="products">
+                <div class="product" data-category="one-piece" data-product-id="zoro-limited-edition">
+                    <img src="./images/products/roronoa le.png" alt="Roronoa Zoro v4 Shirt">
+                    <h3>Roronoa Zoro v4 Limited Edition</h3>
+                    <p><span class="original-price">₹1,200.00</span> <span class="current-price">₹1,020.00</span> (15% off)</p>
+                    <button class="select-btn">Select Options</button>
+                </div>
+                <div class="product" data-category="attack-on-titan" data-product-id="eren-yeager-v4">
+                    <img src="./images/products/attack titan.png" alt="Eren Yeager v4 Attack on Titan Shirt">
+                    <h3>Attack Titan v4 T Shirt</h3>
+                    <p><span class="original-price">₹800.00</span> <span class="current-price">₹648.00</span> (19% off)</p>
+                    <button class="select-btn">Select Options</button>
+                </div>
+                <div class="product" data-category="one-piece" data-product-id="luffy-gear-5">
+                    <img src="./images/products/luffy gear 5.png" alt="Luffy Gear 5 One Piece T-Shirt">
+                    <h3>Luffy Gear 5 One Piece T-Shirt</h3>
+                    <p><span class="original-price">₹1,000.00</span> <span class="current-price">₹850.00</span> (15% off)</p>
+                    <button class="select-btn">Select Options</button>
+                </div>
+                <div class="product" data-category="one-piece" data-product-id="zoro-v4">
+                    <img src="./images/products/zoro v4.png" alt="Roronoa Zoro v4 One Piece T-Shirt">
+                    <h3>Roronoa Zoro v4 One Piece T-Shirt</h3>
+                    <p><span class="original-price">₹1,000</span> <span class="current-price">₹750</span> (25% off)</p>
+                    <button class="select-btn">Select Options</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Merchandise Section -->
+        <section class="featured-merch">
+            <h2>Featured Merch</h2>
+            <div class="products">
+                <div class="product" data-category="solo-leveling" data-product-id="igris-shirt">
+                    <img src="./images/products/igris.png" alt="Igris Solo Leveling Oversized Shirt">
+                    <h3>Igris Solo Leveling Oversized T Shirt</h3>
+                    <p><span class="original-price">₹800.00</span> <span class="current-price">₹680.00</span> (15% off)</p>
+                    <button class="select-btn">Select Options</button>
+                </div>
+                <div class="product" data-category="berserk" data-product-id="guts-shirt">
+                    <img src="./images/products/guts.png" alt="Guts Berserk Oversized Shirt">
+                    <h3>Guts Berserk Oversized T Shirt</h3>
+                    <p><span class="original-price">₹800.00</span> <span class="current-price">₹680.00</span> (15% off)</p>
+                    <button class="select-btn">Select Options</button>
+                </div>
+                <div class="product" data-category="attack-on-titan" data-product-id="eren-shirt">
+                    <img src="./images/products/eren.png" alt="Eren Yeager Attack on Titan Oversized Shirt">
+                    <h3>Eren Yeager Attack on Titan Oversized T Shirt</h3>
+                    <p><span class="original-price">₹800.00</span> <span class="current-price">₹680.00</span> (15% off)</p>
+                    <button class="select-btn">Select Options</button>
+                </div>
+                
+                <div class="size-popup">
+                    <div class="popup-content">
+                        <button class="close-popup">&times;</button>
+                        <h4>Select Size</h4>
+                            <div class="size-options">
+                            <input type="radio" name="size" id="size-s" class="size-radio" value="s">
+                            <label for="size-s" class="size-btn">S</label>
+
+                            <input type="radio" name="size" id="size-m" class="size-radio" value="m">
+                            <label for="size-m" class="size-btn">M</label>
+                    
+                            <input type="radio" name="size" id="size-l" class="size-radio" value="l">
+                            <label for="size-l" class="size-btn">L</label>
+                    
+                            <input type="radio" name="size" id="size-xl" class="size-radio" value="xl">
+                            <label for="size-xl" class="size-btn">XL</label>
+                    
+                            <input type="radio" name="size" id="size-xxl" class="size-radio" value="xxl">
+                            <label for="size-xxl" class="size-btn">XXL</label>
+                            </div>
+                            <a href="#" class="add-to-cart-popup">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <a href="shop.html#all" class="view-all">View All</a>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services">
+        <div class="service">
+            <div class="icon">🎨</div>
+            <h3>Premium Prints</h3>
+            <p>If you don't find it premium enough, the return is on us.</p>
+        </div>
+
+        <div class="service">
+            <div class="icon">🌍</div>
+            <h3>Worldwide Shipping</h3>
+            <p>Get your orders delivered to you anywhere in the world.</p>
+        </div>
+
+        <div class="service">
+            <div class="icon">🔒</div>
+            <h3>Secure Payment</h3>
+            <p>Your payment information is processed securely.</p>
+        </div>
+        </section>
+
+
+        <!-- FAQs Section -->
+        <section class="faqs">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-container">
+            <details>
+            <summary>Do you ship to my country?</summary>
+            <p>We ship worldwide except for select countries due to customs restrictions. Check our Shipping Policy for the full list.</p>
+            </details>
+
+            <details>
+            <summary>How long does delivery take?</summary>
+            <p>Shipping times are typically 6–8 days for USA, Canada, Europe, & Australia. All other locations take 8–12 days depending on your region.</p>
+            </details>
+
+            <details>
+            <summary>How can I track my order?</summary>
+            <p>You’ll receive a tracking link via email once your order ships. You can also visit our <a href="order-tracking.html">Order Tracking</a> page.</p>
+            </details>
+
+            <details>
+            <summary>What sizes are available?</summary>
+            <p>We offer all sizes from S to XXL. Please refer to the size chart on each product page before ordering.</p>
+            </details>
+
+            <details>
+            <summary>Can I cancel or modify my order?</summary>
+            <p>Orders can be canceled or modified within 2 hours of placement. After that, we cannot guarantee changes due to processing.</p>
+            </details>
+
+            <details>
+            <summary>What’s your return policy?</summary>
+            <p>We accept returns within 7 days of delivery. Items must be unworn and in original packaging. Check our <a href="return.html">Return Policy</a>.</p>
+            </details>
+
+            <details>
+            <summary>Do you restock limited edition items?</summary>
+            <p>Some designs may be restocked based on demand, but limited edition items often sell out permanently. Follow us on social media for updates!</p>
+            </details>
+        </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+        <h2>Otaku Drips</h2>
+        <p>Unleash your anime style.</p>
+        </div>
+
+        <div class="footer-links">
+        <div>
+            <h4>Shop</h4>
+            <ul>
+            <li><a href="shop.html#all">All Products</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="order-tracking.html">Order Tracking</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="shipping-info.html">Shipping Info</a></li>
+            <li><a href="return-policy.html">Return Policy</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Legal</h4>
+            <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Otaku Drips. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

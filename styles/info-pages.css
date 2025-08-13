@@ -1,0 +1,79 @@
+/* Page Container */
+.page-main {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+}
+
+/* Section Styling */
+.page-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.page-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+  color: #111;
+  border-bottom: 2px solid #ffcc00;
+  padding-bottom: 0.4rem;
+}
+
+.page-section h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.page-section p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.page-section ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-section ul li {
+  list-style-type: disc;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+}
+
+/* Links */
+.page-section a {
+  color: #e60000;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+
+.page-section a:hover {
+  color: #b30000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-main {
+    padding: 1rem;
+  }
+
+  .page-section {
+    padding: 1.5rem;
+  }
+
+  .page-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .page-section h2 {
+    font-size: 1.2rem;
+  }
+}

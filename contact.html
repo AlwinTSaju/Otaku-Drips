@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Otaku Drips</title>
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/shop.css">
+  <style>
+    body {
+        background-image: url(./images/tokyo.jpg);
+        background-size: cover;
+    }
+    .contact-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .contact-container h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    .contact-form button {
+      background: #ffcc00;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      padding: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #ffdb4d;
+    }
+
+    .contact-info {
+      margin-top: 3rem;
+      text-align: center;
+      color: #444;
+    }
+
+    .contact-info p {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="./home.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="shop.html#all">Categories</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="shop.html#one-piece">One Piece</a></li>
+                        <li><a href="shop.html#attack-on-titan">Attack on Titan</a></li>
+                        <li><a href="shop.html#demon-slayer">Demon Slayer</a></li>
+                        <li><a href="shop.html#chainsaw-man">Chainsaw Man</a></li>
+                        <li><a href="shop.html#naruto">Naruto</a></li>
+                        <li><a href="shop.html#hunter-x-hunter">Hunter X Hunter</a></li>
+                        <li><a href="shop.html#berserk">Berserk</a></li>
+                        <li><a href="shop.html#blue-lock">Blue Lock</a></li>
+                        <li><a href="shop.html#bleach">Bleach</a></li>
+                        <li><a href="shop.html#black-clover">Black Clover</a></li>
+                        <li><a href="shop.html#noragami">Noragami</a></li>
+                        <li><a href="shop.html#solo-leveling">Solo Leveling</a></li>
+                        <li><a href="shop.html#jujutsu-kaisen">Jujutsu Kaisen</a></li>
+                        <li><a href="shop.html#mob-psycho">Mob Psycho 100</a></li>
+                        <li><a href="shop.html#jojo">Jojo</a></li>
+                        <li><a href="shop.html#vagabond">Vagabond</a></li>
+                    </ul>
+                </li>
+                <li><a href="shop.html#all">Shop</a></li>
+                <li><a href="order-tracking.html">Order Tracking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="user-options">
+                <a href="#search">Search</a>
+                <a href="#account">Account</a>
+                <a href="#wishlist">Wishlist (0)</a>
+                <a href="#cart">Cart ($0.00)</a>
+            </div>
+        </nav>
+    </header>
+
+  <!-- Main Contact Section -->
+  <main class="contact-container">
+    <h2>Contact Otaku Drips</h2>
+    <form class="contact-form" id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="text" name="subject" placeholder="Subject" required />
+      <textarea name="message" placeholder="Your Message..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p>Email: support@otakudrips.com</p>
+      <p>Phone: +91 91880 75755</p>
+      <p>Instagram: @otakudrips</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>Otaku Drips</h2>
+      <p>Unleash your anime style.</p>
+    </div>
+
+    <div class="footer-links">
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html#all">All Products</a></li>
+          <li><a href="wishlist.html">Wishlist</a></li>
+          <li><a href="order-tracking.html">Order Tracking</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shipping-info.html">Shipping Info</a></li>
+          <li><a href="return-policy.html">Return Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Otaku Drips. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script>
+    // Placeholder form submission handler
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
