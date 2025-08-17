@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const productCard = button.closest('.product-card');
       const productId = productCard?.dataset.productId;
       if (productId) {
-        window.location.href = `product.html?id=${productId}`;
+        window.location.href = `product.php?id=${productId}`;
       } else {
         console.error('Product ID missing on product card.');
       }

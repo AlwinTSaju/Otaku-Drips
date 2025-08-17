@@ -29,8 +29,8 @@ session_start();
 
         <form action="login-process.php" method="POST">
           <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required />
+            <label for="email">Username/Email Address</label>
+            <input type="text" id="email" name="email" required />
           </div>
 
           <div class="form-group">
@@ -41,7 +41,7 @@ session_start();
           <button type="submit" class="login-btn">Login</button>
         </form>
 
-        <p class="signup-link">Don't have an account? <a href="register.html">Sign Up</a></p>
+        <p class="signup-link">Don't have an account? <a href="register.php">Sign Up</a></p>
       </div>
     </div>
   </div>

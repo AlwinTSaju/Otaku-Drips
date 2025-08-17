@@ -223,7 +223,7 @@ nav {
 
 .shop-now-btn:hover {
     transform: scale(1.1);
-    background-color: #ffdb4d; /* optional color glow on hover */
+    background-color: #ffdb4d;
 }
 
 .product-column {

@@ -1,3 +1,9 @@
+<?php
+$isLoggedIn = isset($_SESSION['customer_id']) ? 'true' : 'false';
+?>
+<script>
+    const isLoggedIn = <?php echo $isLoggedIn; ?>;
+</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,47 +34,7 @@
     <div id="jojo"></div>
     <div id="vagabond"></div>
     <div id="products"></div>
-    <!-- Header (same as home.html) -->
-    <header>
-        <nav>
-            <ul class="main-menu">
-                <li><a href="home.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="shop.html#all">Categories</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="shop.html#one-piece">One Piece</a></li>
-                        <li><a href="shop.html#attack-on-titan">Attack on Titan</a></li>
-                        <li><a href="shop.html#demon-slayer">Demon Slayer</a></li>
-                        <li><a href="shop.html#chainsaw-man">Chainsaw Man</a></li>
-                        <li><a href="shop.html#naruto">Naruto</a></li>
-                        <li><a href="shop.html#hunter-x-hunter">Hunter X Hunter</a></li>
-                        <li><a href="shop.html#berserk">Berserk</a></li>
-                        <li><a href="shop.html#blue-lock">Blue Lock</a></li>
-                        <li><a href="shop.html#bleach">Bleach</a></li>
-                        <li><a href="shop.html#black-clover">Black Clover</a></li>
-                        <li><a href="shop.html#noragami">Noragami</a></li>
-                        <li><a href="shop.html#solo-leveling">Solo Leveling</a></li>
-                        <li><a href="shop.html#jujutsu-kaisen">Jujutsu Kaisen</a></li>
-                        <li><a href="shop.html#mob-psycho">Mob Psycho 100</a></li>
-                        <li><a href="shop.html#jojo">Jojo</a></li>
-                        <li><a href="shop.html#vagabond">Vagabond</a></li>
-                    </ul>
-                </li>
-                <li><a href="shop.html#all" class="active">Shop</a></li>
-                <li><a href="order-tracking.html">Order Tracking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="user-options">
-                <form id="search-form" action="search.html" method="GET" class="search-bar">
-                    <input type="text" name="query" placeholder="Search products..." required />
-                    <button type="submit">Search</button>
-                </form>
-                <a href="login.php">Login</a>
-                <a href="#wishlist">Wishlist (0)</a>
-                <a href="#cart">Cart ($0.00)</a>
-            </div>
-        </nav>
-    </header>
+    <?php include 'includes/header.php'; ?>
 
     <main class="shop-main">
         <!-- Shop Hero Section -->
@@ -539,7 +505,7 @@
                 </div>
     </main>
 
-    <!-- Footer (same as home.html) -->
+    <!-- Footer (same as home.php) -->
     <footer class="footer">
   <div class="footer-container">
     <div class="footer-brand">
@@ -551,9 +517,9 @@
       <div>
         <h4>Shop</h4>
         <ul>
-          <li><a href="shop.html#all">All Products</a></li>
+          <li><a href="shop.php#all">All Products</a></li>
           <li><a href="wishlist.html">Wishlist</a></li>
-          <li><a href="order-tracking.html">Order Tracking</a></li>
+          <li><a href="order-tracking.php">Order Tracking</a></li>
         </ul>
       </div>
 
@@ -581,6 +547,6 @@
   </div>
 </footer>
 
-    <script src="shop.js"></script>
+    <script type="module" src="scripts/product-popup.js?v=2"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 import productData from './product-data.js';
+
 function setupProductPopups() {
-  const selectBtns = document.querySelectorAll('.select-btn');
   const sizePopup = document.querySelector('.size-popup');
   const addToCartBtn = document.querySelector('.add-to-cart-popup');
   const closePopup = document.querySelector('.close-popup');
@@ -8,9 +8,12 @@ function setupProductPopups() {
   let selectedProductId = '';
   let selectedCategory = '';
 
-  selectBtns.forEach(btn => {
-    btn.addEventListener('click', function () {
-      const productCard = this.closest('.product') || this.closest('.product-card');
+  // Event delegation — works for dynamically loaded products
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('select-btn')) {
+      const productCard = e.target.closest('.product-card') || e.target.closest('.product');
+      if (!productCard) return;
+
       selectedCategory = productCard.dataset.category;
       selectedProductId = productCard.dataset.productId;
 
@@ -18,18 +21,18 @@ function setupProductPopups() {
       document.querySelectorAll('.size-radio').forEach(input => input.checked = false);
 
       // Show popup
-      sizePopup.style.display = 'flex';
-    });
+      if (sizePopup) sizePopup.style.display = 'flex';
+    }
   });
 
-  // Close popup when clicking on × or outside
-  closePopup.addEventListener('click', () => sizePopup.style.display = 'none');
-  sizePopup.addEventListener('click', (e) => {
+  // Close popup
+  closePopup?.addEventListener('click', () => sizePopup.style.display = 'none');
+  sizePopup?.addEventListener('click', (e) => {
     if (e.target === sizePopup) sizePopup.style.display = 'none';
   });
 
   // Redirect to product page with selected size
-  addToCartBtn.addEventListener('click', () => {
+  addToCartBtn?.addEventListener('click', () => {
     const selectedSize = document.querySelector('.size-radio:checked');
     if (!selectedSize) {
       alert('Please select a size.');

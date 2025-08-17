@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,47 +12,7 @@
 <body>
     <script type="module" src="scripts/product.js"></script>
     <script type="module" src="scripts/product-popup.js"></script>
-    <!-- Header Section with Navigation -->
-    <header>
-        <nav>
-            <ul class="main-menu">
-                <li><a href="./home.html">Home</a></li>
-                <li class="dropdown">
-                    <a href="shop.html#all">Categories</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="shop.html#one-piece">One Piece</a></li>
-                        <li><a href="shop.html#attack-on-titan">Attack on Titan</a></li>
-                        <li><a href="shop.html#demon-slayer">Demon Slayer</a></li>
-                        <li><a href="shop.html#chainsaw-man">Chainsaw Man</a></li>
-                        <li><a href="shop.html#naruto">Naruto</a></li>
-                        <li><a href="shop.html#hunter-x-hunter">Hunter X Hunter</a></li>
-                        <li><a href="shop.html#berserk">Berserk</a></li>
-                        <li><a href="shop.html#blue-lock">Blue Lock</a></li>
-                        <li><a href="shop.html#bleach">Bleach</a></li>
-                        <li><a href="shop.html#black-clover">Black Clover</a></li>
-                        <li><a href="shop.html#noragami">Noragami</a></li>
-                        <li><a href="shop.html#solo-leveling">Solo Leveling</a></li>
-                        <li><a href="shop.html#jujutsu-kaisen">Jujutsu Kaisen</a></li>
-                        <li><a href="shop.html#mob-psycho">Mob Psycho 100</a></li>
-                        <li><a href="shop.html#jojo">Jojo</a></li>
-                        <li><a href="shop.html#vagabond">Vagabond</a></li>
-                    </ul>
-                </li>
-                <li><a href="shop.html#all">Shop</a></li>
-                <li><a href="order-tracking.html">Order Tracking</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="user-options">
-                <form id="search-form" action="search.html" method="GET">
-                    <input type="text" name="query" placeholder="Search products..." required>
-                    <button type="submit">Search</button>
-                </form>
-                <a href="login.php">Login</a>
-                <a href="#wishlist">Wishlist (0)</a>
-                <a href="#cart">Cart (₹0.00)</a>
-            </div>
-        </nav>
-    </header>
+    <?php include 'includes/header.php'; ?>
 
     <main>
         <!-- Hero Section -->
@@ -72,14 +33,14 @@
         </div>
         <section class="logo-section">
         <div class="logo-row">
-            <a href="shop.html#one-piece"><img src="./images/logorow/onepiece.jpeg" alt="One Piece Logo"></a>
-            <a href="shop.html#berserk"><img src="./images/logorow/berserk.webp" alt="Berserk Logo"></a>
-            <a href="shop.html#bleach"><img src="./images/logorow/bleach.webp" alt="Bleach Logo"></a>
-            <a href="shop.html#naruto"><img src="./images/logorow/naruto.webp" alt="Naruto Logo"></a>
-            <a href="shop.html#mob-psycho"><img src="./images/logorow/mob.webp" alt="Mob Psycho 100 Logo"></a>
-            <a href="shop.html#noragami"><img src="./images/logorow/noragami.webp" alt="Noragami Logo"></a>
-            <a href="shop.html#blue-lock"><img src="./images/logorow/bluelock.webp" alt="Bluelock Logo"></a>
-            <a href="shop.html#chainsaw-man"><img src="./images/logorow/chainsaw.webp" alt="Chainsaw Man Logo"></a>
+            <a href="shop.php#one-piece"><img src="./images/logorow/onepiece.jpeg" alt="One Piece Logo"></a>
+            <a href="shop.php#berserk"><img src="./images/logorow/berserk.webp" alt="Berserk Logo"></a>
+            <a href="shop.php#bleach"><img src="./images/logorow/bleach.webp" alt="Bleach Logo"></a>
+            <a href="shop.php#naruto"><img src="./images/logorow/naruto.webp" alt="Naruto Logo"></a>
+            <a href="shop.php#mob-psycho"><img src="./images/logorow/mob.webp" alt="Mob Psycho 100 Logo"></a>
+            <a href="shop.php#noragami"><img src="./images/logorow/noragami.webp" alt="Noragami Logo"></a>
+            <a href="shop.php#blue-lock"><img src="./images/logorow/bluelock.webp" alt="Bluelock Logo"></a>
+            <a href="shop.php#chainsaw-man"><img src="./images/logorow/chainsaw.webp" alt="Chainsaw Man Logo"></a>
         </div>
         </section>
         
@@ -94,29 +55,31 @@
             <h2>Fan Favorites</h2>
             <div class="products">
                 <div class="product" data-category="one-piece" data-product-id="zoro-limited-edition">
-                    <img src="./images/products/roronoa le.png" alt="Roronoa Zoro v4 Shirt">
-                    <h3>Roronoa Zoro v4 Limited Edition</h3>
+                    <a href="product.php?id=zoro-limited-edition"><img src="./images/products/roronoa le.png" alt="Roronoa Zoro v4 Shirt"></a>                    <h3>Roronoa Zoro v4 Limited Edition</h3>
                     <p><span class="original-price">₹1,200.00</span> <span class="current-price">₹1,020.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
                 <div class="product" data-category="attack-on-titan" data-product-id="eren-yeager-v4">
-                    <img src="./images/products/attack titan.png" alt="Eren Yeager v4 Attack on Titan Shirt">
+                    <a href="product.php?id=eren-yeager-v4"><img src="./images/products/attack titan.png" alt="Eren Yeager v4 Attack on Titan Shirt"></a>
                     <h3>Attack Titan v4 T Shirt</h3>
                     <p><span class="original-price">₹800.00</span> <span class="current-price">₹648.00</span> (19% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
+
                 <div class="product" data-category="one-piece" data-product-id="luffy-gear-5">
-                    <img src="./images/products/luffy gear 5.png" alt="Luffy Gear 5 One Piece T-Shirt">
+                    <a href="product.php?id=luffy-gear-5"><img src="./images/products/luffy gear 5.png" alt="Luffy Gear 5 One Piece T-Shirt"></a>
                     <h3>Luffy Gear 5 One Piece T-Shirt</h3>
                     <p><span class="original-price">₹1,000.00</span> <span class="current-price">₹850.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
+
                 <div class="product" data-category="one-piece" data-product-id="zoro-v4">
-                    <img src="./images/products/zoro v4.png" alt="Roronoa Zoro v4 One Piece T-Shirt">
+                    <a href="product.php?id=zoro-v4"><img src="./images/products/zoro v4.png" alt="Roronoa Zoro v4 One Piece T-Shirt"></a>
                     <h3>Roronoa Zoro v4 One Piece T-Shirt</h3>
                     <p><span class="original-price">₹1,000</span> <span class="current-price">₹750</span> (25% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
+
             </div>
         </section>
 
@@ -125,19 +88,19 @@
             <h2>Featured Merch</h2>
             <div class="products">
                 <div class="product" data-category="solo-leveling" data-product-id="igris-shirt">
-                    <img src="./images/products/igris.png" alt="Igris Solo Leveling Oversized Shirt">
+                    <a href="product.php?id=igris-shirt"><img src="./images/products/igris.png" alt="Igris Solo Leveling Oversized Shirt"></a>
                     <h3>Igris Solo Leveling Oversized T Shirt</h3>
                     <p><span class="original-price">₹800.00</span> <span class="current-price">₹680.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
                 <div class="product" data-category="berserk" data-product-id="guts-shirt">
-                    <img src="./images/products/guts.png" alt="Guts Berserk Oversized Shirt">
+                    <a href="product.php?id=guts-shirt"><img src="./images/products/guts.png" alt="Guts Berserk Oversized Shirt"></a>
                     <h3>Guts Berserk Oversized T Shirt</h3>
                     <p><span class="original-price">₹800.00</span> <span class="current-price">₹680.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
                 <div class="product" data-category="attack-on-titan" data-product-id="eren-shirt">
-                    <img src="./images/products/eren.png" alt="Eren Yeager Attack on Titan Oversized Shirt">
+                    <a href="product.php?id=eren-shirt"><img src="./images/products/eren.png" alt="Eren Yeager Attack on Titan Oversized Shirt"></a>
                     <h3>Eren Yeager Attack on Titan Oversized T Shirt</h3>
                     <p><span class="original-price">₹800.00</span> <span class="current-price">₹680.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
@@ -167,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            <a href="shop.html#all" class="view-all">View All</a>
+            <a href="shop.php#all" class="view-all">View All</a>
         </section>
 
         <!-- Services Section -->
@@ -209,7 +172,7 @@
 
             <details>
             <summary>How can I track my order?</summary>
-            <p>You’ll receive a tracking link via email once your order ships. You can also visit our <a href="order-tracking.html">Order Tracking</a> page.</p>
+            <p>You’ll receive a tracking link via email once your order ships. You can also visit our <a href="order-tracking.php">Order Tracking</a> page.</p>
             </details>
 
             <details>
@@ -248,9 +211,9 @@
         <div>
             <h4>Shop</h4>
             <ul>
-            <li><a href="shop.html#all">All Products</a></li>
+            <li><a href="shop.php#all">All Products</a></li>
             <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="order-tracking.html">Order Tracking</a></li>
+            <li><a href="order-tracking.php">Order Tracking</a></li>
             </ul>
         </div>
 
@@ -277,6 +240,7 @@
         <p>© 2025 Otaku Drips. All Rights Reserved.</p>
     </div>
 </footer>
+<script type="module" src="scripts/product-popup.js?v=2"></script>
 
 </body>
 </html>

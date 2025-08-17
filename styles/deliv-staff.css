@@ -1,0 +1,89 @@
+body {
+    font-family: "Outfit, Regular", sans-serif;
+    background-color: #f5f5f5;
+    color: #111;
+    line-height: 1.6;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.dashboard-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #e60000;
+}
+
+.dashboard-section {
+    margin-top: 2rem;
+}
+
+.dashboard-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e60000;
+    padding-bottom: 0.5rem;
+}
+
+/* Notification styles */
+.dashboard-notification {
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.95rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.dashboard-notification.success {
+    background-color: #e6f9ed;
+    color: #2d7a3e;
+    border-left: 4px solid #2d7a3e;
+}
+
+.dashboard-notification.error {
+    background-color: #fdecea;
+    color: #a4262c;
+    border-left: 4px solid #a4262c;
+}
+
+/* Table styling */
+.delivery-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.delivery-table th, .delivery-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.delivery-table th {
+    background-color: #f7f7f7;
+    color: #e60000;
+    font-weight: bold;
+}
+
+.delivery-table tr:hover {
+    background-color: #fafafa;
+}
+
+.status-form select {
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.status-form select:focus {
+    outline: none;
+    border-color: #e60000;
+}
