@@ -37,7 +37,7 @@ function setupProductPopups() {
     }
 
     if (selectedProductId) {
-      window.location.href = `product.html?id=${selectedProductId}&size=${selectedSize.value}`;
+      window.location.href = `product.php?id=${selectedProductId}&size=${selectedSize.value}`;
     }
   });
 }
