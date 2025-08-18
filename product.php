@@ -1,11 +1,5 @@
-<?php
-include 'includes/header.php';
-
-$isLoggedIn = isset($_SESSION['customer_id']) ? 'true' : 'false';
-?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +7,6 @@ $isLoggedIn = isset($_SESSION['customer_id']) ? 'true' : 'false';
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/product.css">
 </head>
-
 <body>
     <script>
         // make login status available to JS
@@ -29,42 +22,54 @@ $isLoggedIn = isset($_SESSION['customer_id']) ? 'true' : 'false';
                     <!-- thumbnails dynamically injected -->
                 </div>
             </div>
-            <div class="product-actions">
-                <!-- Place Order Form -->
-                <form action="place_order.php" method="POST" id="order-form">
-                    <!-- Hidden fields for product info -->
-                    <input type="hidden" name="product_id" id="product-id" value="101">
-                    <input type="hidden" name="product_name" id="product-name" value="Naruto Hoodie">
-                    <input type="hidden" name="product_price" id="product-price-input" value="1200">
+            
+            <div class="product-details">
+                <h1 id="product-title"></h1>
+                <span class="series-tag" id="product-category"></span>
+                
+                <div class="price-container">
+                    <span class="current-price" id="product-price"></span>
+                    <span class="original-price" id="original-price"></span>
+                    <span class="discount-badge" id="discount-percent"></span>
+                </div>
+                
+                <div class="size-selection">
+                    <h3>Select Size</h3>
+                    <div class="size-options">
+                        <input type="radio" name="size" id="size-s" class="size-radio" value="s">
+                        <label for="size-s" class="size-btn">S</label>
 
-                    <!-- Size options inside form -->
-                    <div class="size-selection">
-                        <h3>Select Size</h3>
-                        <div class="size-options">
-                            <input type="radio" name="size" id="size-s" value="s" required>
-                            <label for="size-s" class="size-btn">S</label>
-
-                            <input type="radio" name="size" id="size-m" value="m">
-                            <label for="size-m" class="size-btn">M</label>
-
-                            <input type="radio" name="size" id="size-l" value="l">
-                            <label for="size-l" class="size-btn">L</label>
-
-                            <input type="radio" name="size" id="size-xl" value="xl">
-                            <label for="size-xl" class="size-btn">XL</label>
-
-                            <input type="radio" name="size" id="size-xxl" value="xxl">
-                            <label for="size-xxl" class="size-btn">XXL</label>
-                        </div>
+                        <input type="radio" name="size" id="size-m" class="size-radio" value="m">
+                        <label for="size-m" class="size-btn">M</label>
+                
+                        <input type="radio" name="size" id="size-l" class="size-radio" value="l">
+                        <label for="size-l" class="size-btn">L</label>
+                
+                        <input type="radio" name="size" id="size-xl" class="size-radio" value="xl">
+                        <label for="size-xl" class="size-btn">XL</label>
+                
+                        <input type="radio" name="size" id="size-xxl" class="size-radio" value="xxl">
+                        <label for="size-xxl" class="size-btn">XXL</label>
                     </div>
+                </div>
 
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" name="quantity" value="1" min="1">
-
-                    <button type="submit" class="add-to-cart">Place Order</button>
-                </form>
+                <div class="quantity-selector">
+                    <h3>Quantity:</h3>
+                    <button type="button" class="qty-btn" id="decreaseQty">-</button>
+                    <input type="number" id="productQty" value="1" min="1">
+                    <button type="button" class="qty-btn" id="increaseQty">+</button>
+                </div>
+                
+                <div class="product-actions">
+                    <button id="add-to-cart-btn" class="add-to-cart">Add to Cart</button>
+                    <button class="wishlist-btn">♥ Add to Wishlist</button>
+                </div>
+                
+                <div class="product-description">
+                    <h3>Description</h3>
+                    <p id="product-desc"></p>
+                </div>
             </div>
-
         </section>
     </main>
 
@@ -79,7 +84,8 @@ $isLoggedIn = isset($_SESSION['customer_id']) ? 'true' : 'false';
             <div class="footer-links">
                 <div>
                     <h4>Shop</h4>
-                    <ul <li><a href="shop.php#all">All Products</a></li>
+                    <ul>
+                        <li><a href="shop.php#all">All Products</a></li>
                         <li><a href="wishlist.html">Wishlist</a></li>
                         <li><a href="order-tracking.php">Order Tracking</a></li>
                     </ul>
@@ -111,38 +117,46 @@ $isLoggedIn = isset($_SESSION['customer_id']) ? 'true' : 'false';
 
     <!-- Scripts -->
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const addToCartBtn = document.getElementById("add-to-cart-btn");
-            const wishlistBtn = document.querySelector(".wishlist-btn");
+    document.addEventListener("DOMContentLoaded", () => {
+        const addToCartBtn = document.getElementById("add-to-cart-btn");
+        const wishlistBtn = document.querySelector(".wishlist-btn");
 
-            if (addToCartBtn) {
-                addToCartBtn.addEventListener("click", (e) => {
-                    if (!isLoggedIn) {
-                        e.preventDefault();
-                        window.location.href = "login.php";
-                        return;
-                    }
-                    // If logged in, run Add to Cart logic
-                    console.log("Adding to cart...");
-                });
-            }
+        if (addToCartBtn) {
+            addToCartBtn.addEventListener("click", (e) => {
+                if (!isLoggedIn) {
+                    e.preventDefault();
+                    window.location.href = "login.php";
+                    return;
+                }
+                // If logged in, run Add to Cart logic
+                console.log("Adding to cart...");
+            });
+        }
 
-            if (wishlistBtn) {
-                wishlistBtn.addEventListener("click", (e) => {
-                    if (!isLoggedIn) {
-                        e.preventDefault();
-                        window.location.href = "login.php";
-                        return;
-                    }
-                    // If logged in, run Wishlist logic
-                    console.log("Adding to wishlist...");
-                });
-            }
-        });
+        if (wishlistBtn) {
+            wishlistBtn.addEventListener("click", (e) => {
+                if (!isLoggedIn) {
+                    e.preventDefault();
+                    window.location.href = "login.php";
+                    return;
+                }
+                // If logged in, run Wishlist logic
+                console.log("Adding to wishlist...");
+            });
+        }
+    });
+
+    
+    const qtyInput = document.getElementById("productQty");
+    document.getElementById("decreaseQty").onclick = () => {
+        if (qtyInput.value > 1) qtyInput.value--;
+    };
+    document.getElementById("increaseQty").onclick = () => {
+        qtyInput.value++;
+    };
     </script>
 
     <script type="module" src="scripts/product-data.js"></script>
     <script type="module" src="scripts/product.js"></script>
 </body>
-
 </html>

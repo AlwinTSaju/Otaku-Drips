@@ -143,6 +143,45 @@
   margin-top: 2rem;
 }
 
+.qty-btns {
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex: 1;
+  background-color: #ffcc00;
+  border: none;
+  color: #000;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quantity button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  background: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  border-radius: 4px;
+}
+
+.quantity input.qty {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
 .add-to-cart,
 .wishlist-btn {
   padding: 1rem 1.5rem;
@@ -225,3 +264,5 @@
     min-width: 45px;
   }
 }
+
+
