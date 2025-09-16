@@ -156,7 +156,6 @@
     };
     </script>
 
-    <script type="module" src="scripts/product-data.js"></script>
     <script type="module" src="scripts/product.js"></script>
 </body>
 </html>
