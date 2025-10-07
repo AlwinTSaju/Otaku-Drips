@@ -84,398 +84,39 @@ $isLoggedIn = isset($_SESSION['customer_id']) ? 'true' : 'false';
         <section class="product-grid-section" id="products">
             <h2>All Products</h2>
             <div class="product-grid",>
-                <!-- Product 1 -->
-                <div class="product-card" data-category="one-piece" data-product-id="zoro-limited-edition">
-                    <img src="./images/products/roronoa le.png" alt="Roronoa Zoro v4 Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">One Piece</span>
-                        <h3>Roronoa Zoro v4 Limited Edition</h3>
-                        <div class="price">
-                            <span class="original-price">₹1,200.00</span>
-                            <span class="current-price">₹1,020.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn" onclick="document.getElementById('size-popup-toggle').checked = true">
-                                Select Options
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 2 -->
-                <div class="product-card" data-category="attack-on-titan" data-product-id="eren-yeager-v4">
-                    <img src="./images/products/attack titan.png" alt="Eren Yeager Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Attack on Titan</span>
-                        <h3>Attack Titan v4 T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹648.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn" onclick="document.getElementById('size-popup-toggle').checked = true">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 3 -->
-                <div class="product-card" data-category="one-piece" data-product-id="luffy-gear-5">
-                    <img src="./images/products/luffy gear 5.png" alt="Luffy Gear 5 Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">One Piece</span>
-                        <h3>Luffy Gear 5 One Piece T-Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹1,000.00</span>
-                            <span class="current-price">₹850.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 4 -->
-                <div class="product-card" data-category="one-piece" data-product-id="zoro-v4">
-                    <img src="./images/products/zoro v4.png" alt="Zoro v4 Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">One Piece</span>
-                        <h3>Roronoa Zoro v4 One Piece T-Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹1,000</span>
-                            <span class="current-price">₹750</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 5 -->
-                <div class="product-card" data-category="solo-leveling" data-product-id="igris-shirt">
-                    <img src="./images/products/igris.png" alt="Igris Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Solo Leveling</span>
-                        <h3>Igris Solo Leveling Oversized T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 6 -->
-                <div class="product-card" data-category="berserk" data-product-id="guts-shirt">
-                    <img src="./images/products/guts.png" alt="Guts Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Berserk</span>
-                        <h3>Guts Berserk Hoodie</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 7 -->
-                <div class="product-card" data-category="attack-on-titan" data-product-id="eren-shirt">
-                    <img src="./images/products/eren.png" alt="Eren Yeager Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Attack on Titan</span>
-                        <h3>Eren Yeager Attack on Titan T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Product 8 -->
-                <div class="product-card" data-category="naruto" data-product-id="sasuke-shirt">
-                    <img src="./images/products/sasuke.png" alt="Sasuke Uchiha T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Naruto</span>
-                        <h3>Sasuke Uchiha T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹900.00</span>
-                            <span class="current-price">₹765.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                require 'db.php';
 
-                <!-- Product 9 -->
-                <div class="product-card" data-category="black-clover" data-product-id="black-clover-shirt">
-                    <img src="./images/products/black clover.png" alt="Black Clover T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Black Clover</span>
-                        <h3>Black Clover T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
+                // Fetch all products
+                $result = $conn->query("SELECT * FROM product");
 
-                <!-- Product 10 -->
-                <div class="product-card" data-category="bleach" data-product-id="bleach-hoodie">
-                    <img src="./images/products/bleach.png" alt="Bleach T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Bleach</span>
-                        <h3>Bleach Hoodie</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        ?>
+                        <div class="product-card" 
+                            data-category="<?php echo htmlspecialchars($row['category']); ?>" 
+                            data-product-id="<?php echo htmlspecialchars($row['product_id']); ?>">
 
-                <!-- Product 11 -->
-                <div class="product-card" data-category="blue-lock" data-product-id="blue-lock-shirt">
-                    <img src="./images/products/blue lock.png" alt="Blue Lock T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Blue Lock</span>
-                        <h3>Blue Lock T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
+                            <a href="product.php?id=<?php echo urlencode($row['product_id']); ?>"><img src="<?php echo htmlspecialchars($row['image']); ?>" alt="<?php echo htmlspecialchars($row['name']); ?>"></a>
 
-                <!-- Product 12 -->
-                <div class="product-card" data-category="chainsaw-man" data-product-id="chainsaw-man-shirt">
-                    <img src="./images/products/chainsaw 2.png" alt="Chainsaw Man T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Chainsaw Man</span>
-                        <h3>Chainsaw Man T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
+                            <div class="product-info">
+                                <h3><?php echo htmlspecialchars($row['name']); ?></h3>
+                                <div class="price">
+                                    <span class="original-price">₹<?php echo number_format($row['original_price'], 2); ?></span>
+                                    <span class="current-price">₹<?php echo number_format($row['price'], 2); ?></span>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="wishlist-btn">♡</button>
+                                    <button class="select-btn">Select Options</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 13 -->
-                <div class="product-card" data-category="death-note" data-product-id="death-note-shirt">
-                    <img src="./images/products/death note.png" alt="Death Note T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Death Note</span>
-                        <h3>Death Note T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 13 -->
-                <div class="product-card" data-category="jujutsu-kaisen" data-product-id="gojo-shirt">
-                    <img src="./images/products/gojo.png" alt="jujutsu Kaisen T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">jujutsu Kaisen</span>
-                        <h3>jujutsu Kaisen T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 14 -->
-                <div class="product-card" data-category="hunter-x-hunter" data-product-id="hunter-x-hunter-shirt">
-                    <img src="./images/products/hunter x hunter.png" alt="Hunter X Hunter T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Hunter X Hunter</span>
-                        <h3>Hunter X Hunter T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 15 -->
-                <div class="product-card" data-category="mob-psycho" data-product-id="mob-psycho-shirt">
-                    <img src="./images/products/mob.png" alt="Mob Psycho T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Mob Psycho</span>
-                        <h3>Mob Psycho T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 16 -->
-                <div class="product-card" data-category="demon-slayer" data-product-id="nezuko-crop-top">
-                    <img src="./images/products/nezuko.png" alt="Nezuko T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Demon Slayer</span>
-                        <h3>Nezuko Crop Top</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 17 -->
-                <div class="product-card" data-category="demon-slayer" data-product-id="nine-tails-hoodie">
-                    <img src="./images/products/nine tails.png" alt="Nine Tails T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Demon Slayer</span>
-                        <h3>Nine Tails Hoodie</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 18 -->
-                <div class="product-card" data-category="noragami" data-product-id="noragami-shirt">
-                    <img src="./images/products/noragami.png" alt="Noragami T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Noragami</span>
-                        <h3>Noragami T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 19 -->
-                <div class="product-card" data-category="solo-leveling" data-product-id="solo-statue-shirt">
-                    <img src="./images/products/solo statue.png" alt="Solo Leveling T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Solo Leveling</span>
-                        <h3>Solo Leveling Statue T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 20 -->
-                <div class="product-card" data-category="chainsaw-man" data-product-id="chainsaw-man2-shirt">
-                    <img src="./images/products/chainsaw man.png" alt="Chainsaw Man T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Chainsaw Man</span>
-                        <h3>Chainsaw Man Hoodie</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 21 -->
-                <div class="product-card" data-category="vagabond" data-product-id="vagabond-shirt">
-                    <img src="./images/products/vagabond.png" alt="Vagabond T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Vagabond</span>
-                        <h3>Vagabond T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 22 -->
-                <div class="product-card" data-category="zenitsu-nezuko" data-product-id="zenitsu-nezuko-shirt">
-                    <img src="./images/products/zenitsu nezuko.png" alt="Zenitsu Nezuko T Shirt">
-                    <div class="product-info">
-                        <span class="series-tag">Demon Slayer</span>
-                        <h3>Zenitsu & Nezuko T Shirt</h3>
-                        <div class="price">
-                            <span class="original-price">₹800.00</span>
-                            <span class="current-price">₹680.00</span>
-                        </div>
-                        <div class="product-actions">
-                            <button class="wishlist-btn">♥</button>
-                            <button class="select-btn">Select Options</button>
-                        </div>
-                    </div>
-                </div>
+                        <?php
+                    }
+                } else {
+                    echo "<p>No products found.</p>";
+                }
+                ?>
             </div>
         </section>
 
@@ -500,52 +141,12 @@ $isLoggedIn = isset($_SESSION['customer_id']) ? 'true' : 'false';
                             <input type="radio" name="size" id="size-xxl" class="size-radio" value="xxl">
                             <label for="size-xxl" class="size-btn">XXL</label>
                             </div>
-                            <a href="#" class="add-to-cart-popup">Add to Cart</a>
+                            <a href="#" class="add-to-cart-popup">Select</a>
                     </div>
                 </div>
     </main>
 
-    <!-- Footer (same as home.php) -->
-    <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-brand">
-      <h2>Otaku Drips</h2>
-      <p>Unleash your anime style.</p>
-    </div>
-
-    <div class="footer-links">
-      <div>
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="shop.php#all">All Products</a></li>
-          <li><a href="wishlist.html">Wishlist</a></li>
-          <li><a href="order-tracking.php">Order Tracking</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Support</h4>
-        <ul>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="shipping-info.html">Shipping Info</a></li>
-          <li><a href="return-policy.html">Return Policy</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="terms.html">Terms & Conditions</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Otaku Drips. All Rights Reserved.</p>
-  </div>
-</footer>
+    <?php include 'includes/footer.php'; ?>
 
     <script type="module" src="scripts/product-popup.js?v=2"></script>
 </body>

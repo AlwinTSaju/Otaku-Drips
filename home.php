@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="styles/search.css">
 </head>
 <body>
-    <script type="module" src="scripts/product.js"></script>
     <script type="module" src="scripts/product-popup.js"></script>
     <?php include 'includes/header.php'; ?>
 
@@ -54,27 +53,28 @@
         <section class="fan-favorites">
             <h2>Fan Favorites</h2>
             <div class="products">
-                <div class="product" data-category="one-piece" data-product-id="zoro-limited-edition">
-                    <a href="product.php?id=zoro-limited-edition"><img src="./images/products/roronoa le.png" alt="Roronoa Zoro v4 Shirt"></a>                    <h3>Roronoa Zoro v4 Limited Edition</h3>
+                <div class="product" data-category="one-piece" data-product-id="1">
+                    <a href="product.php?id=1"><img src="./images/products/roronoa le.png" alt="Roronoa Zoro v4 Shirt"></a>
+                    <h3>Roronoa Zoro v4 Limited Edition</h3>
                     <p><span class="original-price">₹1,200.00</span> <span class="current-price">₹1,020.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
-                <div class="product" data-category="attack-on-titan" data-product-id="eren-yeager-v4">
-                    <a href="product.php?id=eren-yeager-v4"><img src="./images/products/attack titan.png" alt="Eren Yeager v4 Attack on Titan Shirt"></a>
+                <div class="product" data-category="attack-on-titan" data-product-id="2">
+                    <a href="product.php?id=2"><img src="./images/products/attack titan.png" alt="Eren Yeager v4 Attack on Titan Shirt"></a>
                     <h3>Attack Titan v4 T Shirt</h3>
                     <p><span class="original-price">₹800.00</span> <span class="current-price">₹648.00</span> (19% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
 
-                <div class="product" data-category="one-piece" data-product-id="luffy-gear-5">
-                    <a href="product.php?id=luffy-gear-5"><img src="./images/products/luffy gear 5.png" alt="Luffy Gear 5 One Piece T-Shirt"></a>
+                <div class="product" data-category="one-piece" data-product-id="3">
+                    <a href="product.php?id=3"><img src="./images/products/luffy gear 5.png" alt="Luffy Gear 5 One Piece T-Shirt"></a>
                     <h3>Luffy Gear 5 One Piece T-Shirt</h3>
                     <p><span class="original-price">₹1,000.00</span> <span class="current-price">₹850.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
 
-                <div class="product" data-category="one-piece" data-product-id="zoro-v4">
-                    <a href="product.php?id=zoro-v4"><img src="./images/products/zoro v4.png" alt="Roronoa Zoro v4 One Piece T-Shirt"></a>
+                <div class="product" data-category="one-piece" data-product-id="4">
+                    <a href="product.php?id=4"><img src="./images/products/zoro v4.png" alt="Roronoa Zoro v4 One Piece T-Shirt"></a>
                     <h3>Roronoa Zoro v4 One Piece T-Shirt</h3>
                     <p><span class="original-price">₹1,000</span> <span class="current-price">₹750</span> (25% off)</p>
                     <button class="select-btn">Select Options</button>
@@ -87,20 +87,20 @@
         <section class="featured-merch">
             <h2>Featured Merch</h2>
             <div class="products">
-                <div class="product" data-category="solo-leveling" data-product-id="igris-shirt">
-                    <a href="product.php?id=igris-shirt"><img src="./images/products/igris.png" alt="Igris Solo Leveling Oversized Shirt"></a>
+                <div class="product" data-category="solo-leveling" data-product-id="5">
+                    <a href="product.php?id=5"><img src="./images/products/igris.png" alt="Igris Solo Leveling Oversized Shirt"></a>
                     <h3>Igris Solo Leveling Oversized T Shirt</h3>
                     <p><span class="original-price">₹800.00</span> <span class="current-price">₹680.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
-                <div class="product" data-category="berserk" data-product-id="guts-shirt">
-                    <a href="product.php?id=guts-shirt"><img src="./images/products/guts.png" alt="Guts Berserk Oversized Shirt"></a>
+                <div class="product" data-category="berserk" data-product-id="6">
+                    <a href="product.php?id=6"><img src="./images/products/guts.png" alt="Guts Berserk Oversized Shirt"></a>
                     <h3>Guts Berserk Oversized T Shirt</h3>
                     <p><span class="original-price">₹800.00</span> <span class="current-price">₹680.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
                 </div>
-                <div class="product" data-category="attack-on-titan" data-product-id="eren-shirt">
-                    <a href="product.php?id=eren-shirt"><img src="./images/products/eren.png" alt="Eren Yeager Attack on Titan Oversized Shirt"></a>
+                <div class="product" data-category="attack-on-titan" data-product-id="7">
+                    <a href="product.php?id=7"><img src="./images/products/eren.png" alt="Eren Yeager Attack on Titan Oversized Shirt"></a>
                     <h3>Eren Yeager Attack on Titan Oversized T Shirt</h3>
                     <p><span class="original-price">₹800.00</span> <span class="current-price">₹680.00</span> (15% off)</p>
                     <button class="select-btn">Select Options</button>
@@ -199,47 +199,7 @@
 
     </main>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-brand">
-        <h2>Otaku Drips</h2>
-        <p>Unleash your anime style.</p>
-        </div>
-
-        <div class="footer-links">
-        <div>
-            <h4>Shop</h4>
-            <ul>
-            <li><a href="shop.php#all">All Products</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="order-tracking.php">Order Tracking</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4>Support</h4>
-            <ul>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="shipping-info.html">Shipping Info</a></li>
-            <li><a href="return-policy.html">Return Policy</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4>Legal</h4>
-            <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
-            </ul>
-        </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2025 Otaku Drips. All Rights Reserved.</p>
-    </div>
-</footer>
+    <?php include 'includes/footer.php'; ?>
 <script type="module" src="scripts/product-popup.js?v=2"></script>
 
 </body>

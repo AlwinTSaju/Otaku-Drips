@@ -1,5 +1,5 @@
 <?php
-include 'includes/header.php';
+session_start();
 require 'db.php';
 
 // Check if delivery staff is logged in
@@ -31,6 +31,26 @@ $deliveries = $deliveriesQuery->get_result();
     <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
+    <header>
+    <nav>
+        <ul class="main-menu">
+            <li><a href="./deliv-staff-dash.php">Dashboard</a></li>
+        </ul>
+        <div class="user-options">
+            
+
+            <?php if (isset($_SESSION['customer_id'])): ?>
+                <span style="color: white;">Hi, <?php echo htmlspecialchars($_SESSION['customer_name']); ?></span>
+                <a href="logout.php">Logout</a>
+            <?php elseif (isset($_SESSION['staff_id'])): ?>
+                <span style="color: white;">Hi, <?php echo htmlspecialchars($_SESSION['staff_name']); ?> (Delivery)</span>
+                <a href="logout.php">Logout</a>
+            <?php else: ?>
+                <a href="login.php">Login</a>
+            <?php endif; ?>
+        </div>
+    </nav>
+</header>
 
 <main class="dashboard-container">
 

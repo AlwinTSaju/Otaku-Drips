@@ -1,27 +1,37 @@
-import productData from './product-data.js';
-
 function setupProductPopups() {
   const sizePopup = document.querySelector('.size-popup');
   const addToCartBtn = document.querySelector('.add-to-cart-popup');
   const closePopup = document.querySelector('.close-popup');
 
   let selectedProductId = '';
-  let selectedCategory = '';
 
-  // Event delegation — works for dynamically loaded products
-  document.addEventListener('click', (e) => {
+  // Event delegation for "Select Options" button
+  document.addEventListener('click', async (e) => {
     if (e.target.classList.contains('select-btn')) {
       const productCard = e.target.closest('.product-card') || e.target.closest('.product');
       if (!productCard) return;
 
-      selectedCategory = productCard.dataset.category;
       selectedProductId = productCard.dataset.productId;
 
-      // Reset size selection
-      document.querySelectorAll('.size-radio').forEach(input => input.checked = false);
+      // Confirm product exists in DB before allowing popup
+      try {
+        const res = await fetch(`get-product.php?id=${selectedProductId}`);
+        const data = await res.json();
 
-      // Show popup
-      if (sizePopup) sizePopup.style.display = 'flex';
+        if (data.error) {
+          alert("Product not found.");
+          return;
+        }
+
+        // Reset size selection
+        document.querySelectorAll('.size-radio').forEach(input => input.checked = false);
+
+        // Show popup
+        if (sizePopup) sizePopup.style.display = 'flex';
+      } catch (err) {
+        console.error("Error fetching product:", err);
+        alert("Could not load product info.");
+      }
     }
   });
 
@@ -40,6 +50,7 @@ function setupProductPopups() {
     }
 
     if (selectedProductId) {
+      // Now redirect with numeric ID
       window.location.href = `product.php?id=${selectedProductId}&size=${selectedSize.value}`;
     }
   });
