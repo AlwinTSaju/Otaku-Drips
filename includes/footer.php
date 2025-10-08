@@ -11,7 +11,6 @@
             <h4>Shop</h4>
             <ul>
             <li><a href="shop.php#all">All Products</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
             <li><a href="order-tracking.php">Order Tracking</a></li>
             </ul>
         </div>

@@ -106,7 +106,6 @@ $isLoggedIn = isset($_SESSION['customer_id']) ? 'true' : 'false';
                                     <span class="current-price">₹<?php echo number_format($row['price'], 2); ?></span>
                                 </div>
                                 <div class="product-actions">
-                                    <button class="wishlist-btn">♡</button>
                                     <button class="select-btn">Select Options</button>
                                 </div>
                             </div>
