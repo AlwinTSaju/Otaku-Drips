@@ -11,7 +11,7 @@
 }
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Outfit, Regular";
   background-color: black;
 }
 
@@ -160,4 +160,21 @@ input:focus {
 
 .login-link a:hover {
   text-decoration: underline;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    border: 1px solid transparent;
+}
+
+.error-alert {
+    background-color: #ffeaea; 
+    border-color: #f75555; 
+    color: #cc0000; 
+    box-shadow: 0 2px 4px rgba(255, 0, 0, 0.1); 
 }

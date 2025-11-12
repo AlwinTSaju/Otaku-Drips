@@ -30,7 +30,7 @@ if (session_status() === PHP_SESSION_NONE) {
             </li>
             <li><a href="shop.php#all">Shop</a></li>
             <li><a href="order-tracking.php">Order Tracking</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
         </ul>
         <div class="user-options">
             <form id="search-form" action="search.html" method="GET">

@@ -1,3 +1,49 @@
+<?php
+$message = '';
+$message_type = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Get form data
+    $name = trim($_POST['name'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $subject = trim($_POST['subject'] ?? '');
+    $msg = trim($_POST['message'] ?? '');
+
+    // Validate inputs
+    if (empty($name) || empty($email) || empty($subject) || empty($msg)) {
+        $message = "All fields are required!";
+        $message_type = 'error';
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $message = "Please enter a valid email address!";
+        $message_type = 'error';
+    } else {
+        // Prepare email
+        $to = "alwintsaju@gmail.com";
+        $email_subject = "Contact Form: " . htmlspecialchars($subject);
+        
+        $body = "You have received a new contact form submission:\n\n";
+        $body .= "Name: " . htmlspecialchars($name) . "\n";
+        $body .= "Email: " . htmlspecialchars($email) . "\n";
+        $body .= "Subject: " . htmlspecialchars($subject) . "\n";
+        $body .= "Message:\n" . htmlspecialchars($msg) . "\n";
+        
+        // Email headers
+        $headers = "From: " . htmlspecialchars($email) . "\r\n";
+        $headers .= "Reply-To: " . htmlspecialchars($email) . "\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+        
+        // Send email
+        if (mail($to, $email_subject, $body, $headers)) {
+            $message = "Thank you! Your message has been sent successfully.";
+            $message_type = 'success';
+            $name = $email = $subject = $msg = ''; // Clear form
+        } else {
+            $message = "Sorry, there was an error sending your message. Please try again later.";
+            $message_type = 'error';
+        }
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +72,26 @@
       text-align: center;
     }
 
+    .message {
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .message.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .message.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -39,6 +105,7 @@
       border-radius: 4px;
       font-size: 1rem;
       width: 100%;
+      box-sizing: border-box;
     }
 
     .contact-form textarea {
@@ -102,7 +169,7 @@
                 </li>
                 <li><a href="shop.php#all">Shop</a></li>
                 <li><a href="order-tracking.php">Order Tracking</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
             <div class="user-options">
                 <a href="#search">Search</a>
@@ -113,11 +180,39 @@
   <!-- Main Contact Section -->
   <main class="contact-container">
     <h2>Contact Otaku Drips</h2>
-    <form class="contact-form" id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <input type="text" name="subject" placeholder="Subject" required />
-      <textarea name="message" placeholder="Your Message..." required></textarea>
+    
+    <?php if ($message): ?>
+      <div class="message <?php echo $message_type; ?>">
+        <?php echo htmlspecialchars($message); ?>
+      </div>
+    <?php endif; ?>
+
+    <form class="contact-form" method="POST" action="contact.php">
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Your Name" 
+        value="<?php echo htmlspecialchars($name ?? ''); ?>"
+        required 
+      />
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Your Email" 
+        value="<?php echo htmlspecialchars($email ?? ''); ?>"
+        required 
+      />
+      <input 
+        type="text" 
+        name="subject" 
+        placeholder="Subject" 
+        value="<?php echo htmlspecialchars($subject ?? ''); ?>"
+        required 
+      />
+      <textarea 
+        name="message" 
+        placeholder="Your Message..." 
+        required><?php echo htmlspecialchars($msg ?? ''); ?></textarea>
       <button type="submit">Send Message</button>
     </form>
 
@@ -141,7 +236,6 @@
         <h4>Shop</h4>
         <ul>
           <li><a href="shop.php#all">All Products</a></li>
-          <li><a href="wishlist.html">Wishlist</a></li>
           <li><a href="order-tracking.php">Order Tracking</a></li>
         </ul>
       </div>
@@ -149,7 +243,7 @@
       <div>
         <h4>Support</h4>
         <ul>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.php">Contact</a></li>
           <li><a href="shipping-info.html">Shipping Info</a></li>
           <li><a href="return-policy.html">Return Policy</a></li>
         </ul>
@@ -170,13 +264,5 @@
   </div>
 </footer>
 
-  <script>
-    // Placeholder form submission handler
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-      alert("Thank you! Your message has been sent.");
-      this.reset();
-    });
-  </script>
 </body>
 </html>

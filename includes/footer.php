@@ -18,7 +18,7 @@
         <div>
             <h4>Support</h4>
             <ul>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
             <li><a href="shipping-info.html">Shipping Info</a></li>
             <li><a href="return-policy.html">Return Policy</a></li>
             </ul>

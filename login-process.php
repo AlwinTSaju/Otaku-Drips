@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($password === $user['password']) {
             $_SESSION['admin_id'] = $user['admin_id'];
             $_SESSION['admin_name'] = $user['name'];
-            header("Location: admin-dashboard.php");
+            header("Location: Admin/admin-dashboard.php");
             exit;
         }
     }
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($password === $user['password']) {
             $_SESSION['staff_id'] = $user['staff_id'];
             $_SESSION['staff_name'] = $user['name'];
-            header("Location: deliv-staff-dash.php");
+            header("Location: DeliveryStaff/deliv-staff-dash.php");
             exit;
         }
     }

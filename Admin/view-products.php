@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php';
+require '../db.php';
 
 // Check if admin is logged in
 if (!isset($_SESSION['admin_id'])) {

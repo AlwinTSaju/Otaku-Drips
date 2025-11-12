@@ -1,9 +1,14 @@
+@font-face {
+    font-family: "Outfit, Regular";
+    src: url("../fonts/outfit/Outfit-Regular.ttf") format("truetype");
+}
+
 /* Page Container */
 .page-main {
   max-width: 1000px;
   margin: 4rem auto;
   padding: 0 1.5rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Outfit, Regular";
   color: #222;
 }
 
