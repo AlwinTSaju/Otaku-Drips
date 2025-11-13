@@ -31,25 +31,10 @@ try {
     }
     $stmt_item->close();
     
-    // --- NEW PAYMENT LOGIC ---
-
-    // 3. Insert random/dummy details into payment_gateway
-    $gateway_name = ucfirst($payment_method) . " Payment Gateway";
-    // Simple mock API endpoint
-    $gateway_endpoint = "https://mock.api.otakudrips.com/pay/" . strtolower($payment_method); 
+    // 3. Record payment to database
+    // Status is 'paid' for COD (assumed manual payment), 'paid' for online (simulating success)
+    $payment_status = 'paid';
     
-    // NOTE: Assuming your payment_gateway table has (name, api_endpoint)
-    $stmt_gateway = $conn->prepare("INSERT INTO payment_gateway (name, api_endpoint) VALUES (?, ?)");
-    $stmt_gateway->bind_param("ss", $gateway_name, $gateway_endpoint);
-    $stmt_gateway->execute();
-    $gateway_id = $conn->insert_id;
-    $stmt_gateway->close();
-    
-    // 4. Insert into payment table
-    // Status is 'Pending' for COD, 'Completed' for others (simulating success)
-    $payment_status = ($payment_method === 'cod') ? 'Pending' : 'Completed'; 
-    
-    // NOTE: Inserting into payment table with the required minimum fields
     $stmt_payment = $conn->prepare("INSERT INTO payment (order_id, payment_date, amount, status) VALUES (?, NOW(), ?, ?)");
     $stmt_payment->bind_param("ids", $order_id, $grand_total, $payment_status);
     $stmt_payment->execute();

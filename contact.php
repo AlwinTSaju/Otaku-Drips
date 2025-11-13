@@ -141,41 +141,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
 
-  <!-- Header Navigation -->
-  <header>
-        <nav>
-            <ul class="main-menu">
-                <li><a href="./home.php">Home</a></li>
-                <li class="dropdown">
-                    <a href="shop.php#all">Categories</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="shop.php#one-piece">One Piece</a></li>
-                        <li><a href="shop.php#attack-on-titan">Attack on Titan</a></li>
-                        <li><a href="shop.php#demon-slayer">Demon Slayer</a></li>
-                        <li><a href="shop.php#chainsaw-man">Chainsaw Man</a></li>
-                        <li><a href="shop.php#naruto">Naruto</a></li>
-                        <li><a href="shop.php#hunter-x-hunter">Hunter X Hunter</a></li>
-                        <li><a href="shop.php#berserk">Berserk</a></li>
-                        <li><a href="shop.php#blue-lock">Blue Lock</a></li>
-                        <li><a href="shop.php#bleach">Bleach</a></li>
-                        <li><a href="shop.php#black-clover">Black Clover</a></li>
-                        <li><a href="shop.php#noragami">Noragami</a></li>
-                        <li><a href="shop.php#solo-leveling">Solo Leveling</a></li>
-                        <li><a href="shop.php#jujutsu-kaisen">Jujutsu Kaisen</a></li>
-                        <li><a href="shop.php#mob-psycho">Mob Psycho 100</a></li>
-                        <li><a href="shop.php#jojo">Jojo</a></li>
-                        <li><a href="shop.php#vagabond">Vagabond</a></li>
-                    </ul>
-                </li>
-                <li><a href="shop.php#all">Shop</a></li>
-                <li><a href="order-tracking.php">Order Tracking</a></li>
-                <li><a href="contact.php">Contact</a></li>
-            </ul>
-            <div class="user-options">
-                <a href="#search">Search</a>
-            </div>
-        </nav>
-    </header>
+  <?php include 'includes/header.php'; ?>
 
   <!-- Main Contact Section -->
   <main class="contact-container">
